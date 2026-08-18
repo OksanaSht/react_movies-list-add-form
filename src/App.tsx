@@ -6,10 +6,10 @@ import { useState } from 'react';
 import { Movie } from './types/Movie';
 
 export const App = () => {
-  const [movies, SetMovies] = useState<Movie[]>(moviesFromServer);
+  const [movies, setMovies] = useState<Movie[]>(moviesFromServer);
 
   const onAdd = (newMovie: Movie) => {
-    SetMovies(current => [...current, newMovie]);
+    setMovies(current => [...current, newMovie]);
   };
 
   return (
